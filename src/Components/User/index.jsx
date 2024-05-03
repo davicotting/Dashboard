@@ -19,14 +19,20 @@ export function User({ user }) {
     const handleClick = () => {
         if (status === 'pending') {
             setStatus('approved');
-            toast.success("Pedido aprovado com sucesso !")
+            toast.success("Pedido aprovado com sucesso !" , {
+                duration: 2000
+            })
             return
         }
         if (status === 'approved') {
-          return  toast.error("O pedido já está aprovado.")
+          return  toast.error("O pedido já está aprovado.", {
+            duration: 2000
+        })
 
         }
-        toast.error("Apenas é possivel aprovar pedidos pendentes!")
+        toast.error("Apenas é possivel aprovar pedidos pendentes!", {
+            duration: 2000
+        })
     };
     return (
      
